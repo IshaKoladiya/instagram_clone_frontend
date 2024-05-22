@@ -1,0 +1,20 @@
+
+.mainSearch {
+    height: 100vh;
+    animation: slideIn 2s forwards;
+    background-color: white;
+    display: grid;
+}
+
+.scrollDiv{
+    overflow-y: auto;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

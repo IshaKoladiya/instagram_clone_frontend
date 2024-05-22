@@ -1,0 +1,20 @@
+.mainSearch {
+  animation: slideIn 1s forwards;
+  background-color: white;
+  display: grid;
+}
+
+.searchedData {
+  margin-top: 20px;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

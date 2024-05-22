@@ -1,0 +1,71 @@
+.explore {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  .gridContainer {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    gap: 5px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .gridItem {
+    height: 200px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    &:hover .hoverDiv {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+  .spanning {
+    grid-row: span 2;
+    min-height: 200px;
+    max-height: 410px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    &:hover .hoverDiv {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+  .hoverDiv {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+  
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: white;
+    }
+  }
+  

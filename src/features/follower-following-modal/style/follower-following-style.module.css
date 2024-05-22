@@ -1,0 +1,26 @@
+.modal {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal > div {
+    width: 40%;
+    max-height: 82vh;
+    overflow-y: auto;
+    background: white;
+    box-shadow: 0 0 15px 0 rgba(59, 59, 60, 0.712);
+    backdrop-filter: blur(14.5px);
+    -webkit-backdrop-filter: blur(14.5px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.062);
+    border-radius: 10px;
+    padding: 30px;
+  }

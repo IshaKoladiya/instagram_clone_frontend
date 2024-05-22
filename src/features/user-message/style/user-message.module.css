@@ -1,0 +1,45 @@
+.mainSearch {
+  height: 100vh;
+  background-color: white;
+  display: grid;
+}
+
+.scrollDiv {
+  overflow-y: auto;
+  height: 78vh;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.right .message {
+    background-color: #f90f7f;
+    width: auto;
+    display: inline-block;
+    word-wrap: break-word;
+    text-align: start;
+    max-width: 70%;
+    color: white;
+    height: auto;
+    padding: 10px;
+    border-radius:25px 25px 0% 25px;
+    margin: 3px;
+  }
+  .left .message {
+    background-color: #ffc900;
+    width: auto;
+    display: inline-block;
+    word-wrap: break-word;
+    text-align: start;
+    height: auto;
+    max-width: 70%;
+    color: white;
+    padding: 10px;
+    border-radius:25px 25px 25px 0px;
+    margin: 3px;
+  }
