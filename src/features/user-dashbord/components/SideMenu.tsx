@@ -15,7 +15,6 @@ import FilledLike from "../../../assets/svg/filled_like.svg";
 import Create from "../../../assets/image/post.png";
 import FilledCreate from "../../../assets/image/filledPost.png";
 import { useState } from "react";
-import UserDashbordStyle from "../style/user-dashbord.module.css";
 import { UserPost } from "../../user-post/pages";
 
 interface UserImage {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import lockLogo from "../../../assets/image/forgottenPass_logo.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const ForgotPassword = () => {
@@ -8,7 +8,6 @@ const ForgotPassword = () => {
 
   const handleForggotPassword = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     console.log(userNameOrEmail);
 
     const body = {
@@ -18,7 +17,7 @@ const ForgotPassword = () => {
     axios
       .post("http://localhost:4000/user/forgot-password", body)
       .then((res) => {
-        console.log(res.data);
+        window.open(res.data, "_blank");
       })
       .catch((err) => {
         alert(err.response.data.error);

@@ -72,23 +72,19 @@ const UserMessage = () => {
   }, []);
 
   const handleShowUser = () => {
-    const url = `http://localhost:4000/users/chat-show-user/${id}`;
+    const url = "http://localhost:4000/users/chat-show-user";
     const config = {
       headers: {
         Authorization: "Bearer " + token,
       },
     };
-    axios
-      .get(url, config)
-      .then((response) => {
-        const allUsers = response.data;
-        // setChatAllUserShow(allUsers);
-        console.log(allUsers);
-      })
-      .catch((error) => {
+    axios.get(url, config).then((response) => {
+        setChatAllUserShow(response.data);
+        console.log(response.data);
+      }).catch((error) => {
         console.error("Error fetching user chats:", error);
       });
-  };
+  };7
 
   const handleUserClick = (user: any) => {
     handleShowUser();
@@ -96,9 +92,10 @@ const UserMessage = () => {
     navigate(`/message/${user._id}`);
   };
 
+
   useEffect(() => {
     handleShowUser();
-  }, []);
+  }, [handleUserClick]);
 
   return (
     <div className="grid grid-cols-12">
